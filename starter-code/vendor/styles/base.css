@@ -5,12 +5,18 @@ body {
   background-color: white;
 }
 
-.header {
-  background-color:rgb(184, 155, 103);
+a:link, a:visited, a:hover, a:active {
+  text-decoration:none;
+  color:gray;
 }
-nav {
+
+.header {
+  background-color: #cebfa4;
+}
+
+nav, .menu {
   overflow: hidden;
-  background-color:rgb(184, 155, 103);
+  background-color#cebfa4;
 }
 
 nav li {
@@ -27,12 +33,13 @@ header, article{
   padding:1em;
 }
 
-.icon-menu:hover + .menu {
+.icon-menu:hover + nav {
   display: inline;
+  background-color:white;
 }
 
-@media screen and (min-width:400px) and (max-width:599px) {
-  .menu {
+@media screen and (max-width:599px) {
+  nav {
     display:none;
   }
   .menu li {
@@ -40,10 +47,13 @@ header, article{
     display: block;
     text-align:left;
   }
+  img {
+    width:100%
+  }
 }
 
 @media screen and (min-width:600px) {
-  .menu {display:inline; !important}
+  nav {display:inline; !important}
   .icon-menu {display:none;}
 }
 

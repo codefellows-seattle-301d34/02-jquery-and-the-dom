@@ -71,17 +71,15 @@
 
 .icon {
 	display: inline-block;
-	width: 1em;
-	height: 1em;
+	width: 2em;
+	height: 2em;
 	stroke-width: 0;
 	stroke: currentColor;
 	fill: currentColor;
 	position:absolute;
-	right: 0;
-	top: 2em;
+	right: 0em;
+	top: 0.5em;
 	margin: 1em;
+	font-size:2em;
   }
 
-.icon:hover {
-	
-}
