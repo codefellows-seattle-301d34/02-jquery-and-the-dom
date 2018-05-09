@@ -1,0 +1,45 @@
+body > header{
+  padding: 20px;
+  background-color: #FFEAAA;
+}
+
+header ul{
+  margin-top: 40px;
+  padding-left: 10px;
+}
+
+header li{
+  padding-right: 20px;
+  display : inline-block;
+  list-style-type: none;
+}
+
+address, time {
+  display: inline;
+  color: #777;
+}
+
+main {
+  margin: 0 20px 0 20px;
+}
+
+img {
+  width: 20%;
+  max-width: 200px;
+  float: right;
+}
+
+@media only screen and (min-width: 641px) {
+  .icon-menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  ul {
+    display: none;
+  }
+  nav:hover ul{
+    display: block;
+  }
+}
