@@ -22,13 +22,10 @@ nav {
   padding-bottom: 0.7em;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
+.clearfix::after {
+  display: table;
   content: " ";
   clear: both;
-  height: 0;
 }
 
 .template {
