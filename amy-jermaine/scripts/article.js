@@ -30,12 +30,16 @@ Article.prototype.toHtml = function() {
   /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
   We need to fill in:
   1. author name,
-  2. author url,
-  3. article title,
-  4. article body, and
-  5. publication date. */
+  x2. author url,
+  x3. article title,
+  x4. article body, and
+  x5. publication date. */
 
+  $newArticle.find('a.value').text(this.author);
+  $newArticle.find('address a href').text(this.authorUrl);
   $newArticle.find('h1').text(this.title);
+  $newArticle.find('.article-body').text(this.body);
+  $newArticle.find('datetime').text(this.publishedOn);
 
 
   // REVIEW: Display the date as a relative number of 'days ago'
