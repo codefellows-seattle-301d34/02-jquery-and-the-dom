@@ -1,0 +1,58 @@
+body > header {
+  width: 100%;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pull-right {
+  float: right;
+  clear: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.heading-group-h1 {
+  float: left;
+  margin: 10px;
+}
+
+.icon-menu {
+  float: right;
+  font-size: 36px;
+}
+
+nav ul {
+  clear: both;
+}
+
+h1 {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding-bottom: 5px;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-color:#cccccc;
+  margin-left: 10px;
+}
+
+ul{
+  display: none;
+  padding: 0;
+}
+
+nav:hover ul{
+  display: block;
+}
+
+hr {
+  clear: both;
+}

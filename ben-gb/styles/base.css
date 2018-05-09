@@ -1,0 +1,12 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #313131;
+}
+
+body > header {
+  background-color: #FFEAAA;
+}
+
+.template {
+  display: none;
+}
