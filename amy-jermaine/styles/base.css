@@ -1,0 +1,9 @@
+body {
+  background-color: white;
+  font-family: 'Helvetica', sans-serif;
+  min-width: 480px;
+}
+
+main {
+  margin: 0 1.5rem;
+}
