@@ -3,7 +3,7 @@
 let articles = [];
 
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// PUT YOUR RESPONSE HERE
+// The name is capitalized because it is a constructor function. Its purpose is to create new instances of the object in a scalable way. This is a contextual 'this', meaning it refers to the object itself. The variable 'rawDataObj' is a parameter which represents the article from whence we pull the constructor data. 
 
 function Article( rawDataObj ) {
   // DONE: Use the JS object that is passed in to complete this constructor function:
@@ -18,7 +18,7 @@ function Article( rawDataObj ) {
 
 Article.prototype.toHtml = function () {
   // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-  // PUT YOUR RESPONSE HERE
+  // Cloning is more efficient than using vanilla Javascript and allows all new instances to retain descendants and events.
 
   let $newArticle = $( 'article.template' ).clone();
 
@@ -43,14 +43,14 @@ Article.prototype.toHtml = function () {
   $newArticle.find( 'datetime' ).text( this.publishedOn );
 
 
-  // REVIEW: Display the date as a relative number of 'days ago'
+  // REVIEW: Display the date as a relative number of 'days ago'.
   $newArticle.find( 'time' ).html( 'about ' + parseInt( ( new Date() - new Date( this.publishedOn ) ) / 60 / 60 / 24 / 1000 ) + ' days ago' );
   $newArticle.append( '<hr>' );
   return $newArticle;
 };
 
 rawData.sort( function ( a, b ) {
-  // REVIEW: Take a look at this sort method; This may be the first time we've seen it. Look at the docs and think about how the dates would be sorted if the callback were not included in this method.
+  // REVIEW: Take a look at this sort method; this may be the first time we've seen it. Look at the docs and think about how the dates would be sorted if the callback were not included in this method.
   return ( new Date( b.publishedOn ) ) - ( new Date( a.publishedOn ) );
 } );
 
