@@ -27,9 +27,10 @@ Article.prototype.toHtml = function() {
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.attr('data-category', this.category);
 
+  $('article').removeClass('template');
   /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
   We need to fill in:
-  1. author name,
+  x1. author name,
   x2. author url,
   x3. article title,
   x4. article body, and
@@ -58,6 +59,15 @@ rawData.sort(function(a,b) {
 for(let i = 0; i < rawData.length; i++) {
   articles.push(new Article(rawData[i]));
 }
+
+console.log(articles);
+
+// $('#articles').append(articles[0].toHtml());
+// $('#articles').append(articles[1].toHtml());
+// $('#articles').append(articles[2].toHtml());
+// $('#articles').append(articles[3].toHtml());
+
+
 
 for(let i = 0; i < articles.length; i++) {
   $('#articles').append(articles[i].toHtml());
