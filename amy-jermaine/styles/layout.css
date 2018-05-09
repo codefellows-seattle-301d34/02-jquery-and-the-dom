@@ -1,0 +1,63 @@
+main {
+  margin: 0 10px;
+}
+
+.icon-menu {
+  float: right;
+  font-size: 2em;
+  position: absolute;
+  top: 10px; left: 90%;
+}
+
+.heading-group-h1 {
+  display: inline-block;
+  padding: 10px;
+  margin: 0px;
+}
+
+header.clearfix {
+  background: rgb(219, 203, 129);
+  width: 100%;
+  padding-bottom: .25px;
+}
+
+img {
+  display: block;
+  width: 99%;
+  margin: auto;
+  padding: 20px 0px;
+}
+
+#menu {
+  display: none;
+}
+
+#showMenu:hover + ul {
+  display: block;
+}
+
+@media only screen and (min-width: 640px) {
+  hr {
+    display: none;
+  }
+  
+  ul {
+    display: inline-block;
+  }
+  
+  ul li{
+    display: inline-block;
+  }
+  
+  #menu {
+    display: inline-block;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+  
+  img {
+    width: 50%;
+  }
+}
