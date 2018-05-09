@@ -1,63 +1,73 @@
-main {
-  margin: 0 10px;
+body > header {
+  background-color: #FFE9AD;
+  position: relative;
 }
 
-.icon-menu {
-  float: right;
-  font-size: 2em;
-  position: absolute;
-  top: 10px; left: 90%;
+h1 {
+  font-size: 3rem;
 }
 
-.heading-group-h1 {
-  display: inline-block;
-  padding: 10px;
-  margin: 0px;
+h2 {
+  font-size: 2.4rem;
+  margin-top: 0.5rem;
+  padding-left: 1rem; 
+  padding-bottom: 2rem;
+  margin-bottom: 0;
 }
 
-header.clearfix {
-  background: rgb(219, 203, 129);
-  width: 100%;
-  padding-bottom: .25px;
+li {
+  font-size: 1.8rem;
+  list-style-type: none;
+  margin-right: 1rem;
+  padding-left: .4rem;
 }
 
-img {
-  display: block;
-  width: 99%;
-  margin: auto;
-  padding: 20px 0px;
+a {
+  text-decoration: none;
+  color: #777;
 }
 
-#menu {
-  display: none;
+header > div, header > div * {
+  display: inline;
+  color: #777;
+  font-size: 1.3rem;
 }
 
-#showMenu:hover + ul {
-  display: block;
+address > a {
+  font-weight: bold;
 }
 
-@media only screen and (min-width: 640px) {
-  hr {
-    display: none;
-  }
-  
+p {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 640px) {
   ul {
-    display: inline-block;
-  }
-  
-  ul li{
-    display: inline-block;
-  }
-  
-  #menu {
-    display: inline-block;
+    display: none;
+    padding-left: 0;
+    line-height: 4rem; 
   }
 
-  .icon-menu {
-    display: none;
+  li {
+    border-bottom: 1px solid #BBB;
   }
-  
+
   img {
-    width: 50%;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  ul {
+    padding-bottom: 2rem;
+  }
+
+  li {
+    display: inline;
+  }
+
+  p {
+    line-height: 2rem;
   }
 }
