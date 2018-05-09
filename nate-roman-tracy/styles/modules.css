@@ -90,6 +90,10 @@ main p{
     width:100%;
     float:none;
   }
+
+  img {
+    padding: .5em;
+  }
   .icon-menu{
     display: none;
   }

@@ -9,10 +9,15 @@ address {
   font-size: 2.5em;
 }
 
+hr {
+  width: 100%;
+}
 
 img {
   display: block;
   margin: auto;
+  max-width: 80%;
+  
 }
 
 footer{
@@ -27,4 +32,7 @@ footer{
   .pull-right {
     float: right;
   }  
+  img {
+    max-width: 50%;
+  }
 }

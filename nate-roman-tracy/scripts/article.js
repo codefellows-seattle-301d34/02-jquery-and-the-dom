@@ -40,29 +40,27 @@ Article.prototype.toHtml = function() {
   $newArticle.find('a').attr('href', this.authorUrl);
   $newArticle.find('h1').text(this.title);
   $newArticle.find('section.article-body').html(this.body);
+  $newArticle.find('time').attr('datetime' , this.publishedOn);
   // REVIEW: Display the date as a relative number of 'days ago'
-  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+  $newArticle.find('time').html(`about ${parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000)} days ago`);
   $newArticle.append('<hr>');
   return $newArticle;
 };
 
 $(function() {
   rawData.sort(function(a,b) {
-    // REVIEW (DONE): Take a look at this sort method; This may be the first time we've seen it. Look at the docs and think about how the dates would be sorted if the callback were not included in this method.
+    // DONE: Take a look at this sort method; This may be the first time we've seen it. Look at the docs and think about how the dates would be sorted if the callback were not included in this method.
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
   });
 
-  // TODO: Refactor these for loops using the .forEach() array method.
+  // DONE: Refactor these for loops using the .forEach() array method.
 
   rawData.forEach(function(obj) {
     articles.push(new Article(obj));
   });
-  debugger;
-  // articles.forEach(function(obj) {
-  for (let i = 0; i < 5; i++) {
-    $('#articles').append(articles[i].toHtml());
-  // });
-  }
 
-  //remove article template from DOM. We're done with it.
+  articles.forEach(function(obj) {
+    $('#articles').append(obj.toHtml());
+  });
+
 });
