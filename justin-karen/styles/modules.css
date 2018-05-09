@@ -41,10 +41,10 @@ nav li {
 @media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
-    position: absolute;
+    /* position: absolute;
     right: 10px;
     vertical-align: top;
     top: 20px;
-    font-size: 2.5em;
+    font-size: 2.5em; */
     }
   }

@@ -29,10 +29,23 @@ address {
   }
   
   .icon-menu:hover + nav {
-    display: inline;
+    display: block;
     background-color:white;
   }
   
+  li {
+    list-style: none;
+    padding-bottom: 5px;
+    /* display: none; */
+    border-bottom: 2px;
+    border-color: gray;
+    font-family: serif;
+    color: rgb(83, 79, 79);
+    margin-left: 10px;
+  }
+  ul{
+    display: none;
+  }
 
   
   
