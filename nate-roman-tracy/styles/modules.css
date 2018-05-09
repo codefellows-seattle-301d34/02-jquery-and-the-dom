@@ -31,6 +31,10 @@ nav {
   height: 0;
 }
 
+.template {
+  display: none;
+}
+
 ul {
   display: none;
   list-style-type: none;
