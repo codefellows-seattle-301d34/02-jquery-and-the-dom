@@ -26,7 +26,7 @@ Article.prototype.toHtml = function() {
   $('article').removeClass('template');
   /* DONE: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
 
-  //$('article.template').css('display', 'none');
+  $('article.template').css('display', 'none');
 
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.attr('data-category', this.category);
@@ -39,18 +39,19 @@ Article.prototype.toHtml = function() {
       4. article body, and
       5. publication date. */
 
-  $newArticle.attr('href', this.author); 
+  $newArticle.find('a').attr('href', this.authorUrl); 
+  $newArticle.find('address').text(this.author); 
   
-  $('address').text($newArticle.author);
-  $('address > a').attr('href', $newArticle.authorUrl);
-  $('h1').text($newArticle.title);
-  $('section.article-body').text($newArticle.body);
-  $('time').attr('datetime', $newArticle.publishedOn);
-  $('time').text($newArticle.publishedOn);
+  $newArticle.find('h1').text(this.title);
+  $newArticle.find('section.article-body').html(this.body);
+  $newArticle.find('time').attr('datetime', this.publishedOn);
+  $newArticle.find('time').text(this.publishedOn);
 
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+  
   $newArticle.append('<hr>');
+  
   return $newArticle;
 };
 
