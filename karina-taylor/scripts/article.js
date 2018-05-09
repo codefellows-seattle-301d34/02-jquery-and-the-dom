@@ -1,26 +1,42 @@
 'use strict';
-
+console.log('Hello Taylor');
 let articles = [];
 
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// PUT YOUR RESPONSE HERE
+// Article is a constructor function, that is why its capitalized. This will be making reference to the new instance created. rawData is the parameter that we're feeding to that constructor to create new instances of Article.
 
 function Article (rawDataObj) {
-  // TODO: Use the JS object that is passed in to complete this constructor function:
+
+  this.title = title;
+  this.category = category;
+  this.author = author;
+  this.authorUrl = authorUrl;
+  this.publishedOn = publishedOn;
+  this.body = body;
+  this.display = $(function(){
+    $(this).removeClass('template');
+  });
+  // DONE: Use the JS object that is passed in to complete this constructor function:
   // Save ALL the properties of `rawDataObj` into `this`
 }
 
 Article.prototype.toHtml = function() {
   // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-  // PUT YOUR RESPONSE HERE
+  //Its great benefit is that we can easily modify the cloned elements or their contents before reinserting them into the document.
 
   let $newArticle = $('article.template').clone();
-  /* TODO: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
+  /* DONE: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
 
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.attr('data-category', this.category);
 
-  /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
+  $newArticle.text(this.author);
+  $newArticle.text(this.authorUrl);
+  $newArticle.text(this.title);
+  $newArticle.text(this.body);
+  $newArticle.text(this.publishedOn);
+
+  /*  DONE: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
       1. author name,
       2. author url,
