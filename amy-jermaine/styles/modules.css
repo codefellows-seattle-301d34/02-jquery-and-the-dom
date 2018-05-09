@@ -15,3 +15,7 @@ ul li {
 address {
   display: inline;
 }
+
+.template {
+  display: none;
+}
