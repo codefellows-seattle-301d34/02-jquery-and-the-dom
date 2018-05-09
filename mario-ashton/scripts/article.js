@@ -56,8 +56,8 @@ rawData.sort(function(a,b) {
 
 rawData.forEach(function(artData) {
   articles.push(new Article(artData));
-})
+});
 
 articles.forEach(function(artInst){
   $('#articles').append(artInst.toHtml());
-})
+});
