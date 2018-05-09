@@ -1,7 +1,7 @@
 # Project Name
 
 **Author**: Karina Amador, Taylor Ellis.
-**Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Version**: 1.1.1 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
 We want to creat a blog to display articles in a clear logical way so that the user can find the most recent articles first and the blog is easy to read.
