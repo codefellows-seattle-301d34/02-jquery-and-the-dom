@@ -28,6 +28,7 @@ Icons courtesy https://icomoon.io
 jQuery library
 IcoMoon Icon Fonts
 See Architecture above for links.
+Baseline CSS provided by Tracy, Jenny, and Mario in 01-Mobile-First.
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
 
