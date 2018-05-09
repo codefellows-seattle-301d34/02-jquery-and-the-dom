@@ -1,7 +1,7 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+// This data is structured into an array of object literals. These object literals utilize key/value pairs to store the blog post data. Within our blog app, these postings are appended to the DOM, sorted by date.
 
 let rawData = [
   {

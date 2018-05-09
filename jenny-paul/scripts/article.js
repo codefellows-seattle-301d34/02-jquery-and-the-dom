@@ -16,15 +16,11 @@ function Article (rawDataObj) {
   this.authorUrl = rawDataObj.authorUrl;
   this.publishedOn = rawDataObj.publishedOn;
   this.body = rawDataObj.body;
-
 }
-
-
 
 Article.prototype.toHtml = function() {
   // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-  // PUT YOUR RESPONSE HERE
-  // It creates a deep copy of the elements and their decendent elements and text nodes. You can append a clone without the original being deleted. 
+  // It creates a deep copy of the elements and their decendent elements and text nodes. You can append a clone without the original being deleted, and can edit the content before re-insertion.
 
   let $newArticle = $('article.template').clone().removeClass('template');
   /* DONE: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
@@ -32,7 +28,7 @@ Article.prototype.toHtml = function() {
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.attr('data-category', this.category);
 
-  /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
+  /* DONE: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
       1. author name,
       2. author url,
@@ -40,11 +36,10 @@ Article.prototype.toHtml = function() {
       4. article body, and
       5. publication date. */
 
-  $newArticle.attr('author', this.author);
-  $newArticle.attr('author-url', this.authorUrl);
-  $newArticle.attr('title', this.title);
-  $newArticle.attr('body', this.body);
-  $newArticle.attr('published-on', this.publishedOn);
+  $newArticle.find('a').text(this.author).attr('href', this.authorUrl);
+  $newArticle.find('h1').text(this.title);
+  $newArticle.find('.article-body').html(this.body);
+  $newArticle.find('time').attr('datetime', this.publishedOn);
 
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
@@ -57,12 +52,11 @@ rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-// TODO: Refactor these for loops using the .forEach() array method.
+// DONE: Refactor these for loops using the .forEach() array method.
+rawData.forEach(function(post) {
+  articles.push(new Article(post));
+});
 
-for(let i = 0; i < rawData.length; i++) {
-  articles.push(new Article(rawData[i]));
-}
-
-for(let i = 0; i < articles.length; i++) {
-  $('#articles').append(articles[i].toHtml());
-}
+articles.forEach(function(obj) {
+  $('#articles').append(obj.toHtml());
+});

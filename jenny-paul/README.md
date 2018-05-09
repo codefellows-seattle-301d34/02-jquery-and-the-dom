@@ -1,21 +1,32 @@
 # Project Name
 
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Author**: Jenny Lawrence and Paul Ritzman
+**Version**: 3.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
+This application is a blog, which practices mobile-first CSS styling to provide a better user experience.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+* Use SMACSS design philosophy to create a modular layout.
+* Utilize Responsive Web Design techniques.
+* Use JQuery and Object Oriented programming methodologies to append blog postings to the DOM.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+* HTML5
+* CSS3
+* JQuery 3.3.1
+* SMACSS/RWD design principles
+* IcoMoon icons
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
+05-09-2018 9:40am - Article constrcutor function working properly.
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
---> 05-09-2018 9:40am - Article constrcutor function working properly. 
+05-09-2018 10:10am - .toHTML prototype function working, still need to make fully functional
+
+05-09-2018 11:37am - .toHTML prototype function complete
+
+05-09-2018 11:55am - Refactored for loops into forEach functions; Minor edits to CSS.
+
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+* Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
