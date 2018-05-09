@@ -61,4 +61,3 @@ rawData.forEach(function(artData) {
 articles.forEach(function(artInst){
   $('#articles').append(artInst.toHtml());
 })
-
