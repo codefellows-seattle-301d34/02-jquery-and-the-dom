@@ -3,7 +3,7 @@
 let articles = [];
 
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// PUT YOUR RESPONSE HERE
+// This is the constructor function for the Article object. Constructor functions, by convention, begin with a capital letter. It takes the properties from the rawDataObj (from blogArticles.js, contains all the data for the article) and assigns them to the corresponding properties of the article being constructed (using 'this').
 
 function Article (rawDataObj) {
   // DONE: Use the JS object that is passed in to complete this constructor function:
@@ -18,16 +18,16 @@ function Article (rawDataObj) {
 
 Article.prototype.toHtml = function() {
   // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-  // PUT YOUR RESPONSE HERE
+  // Cloning the article creates a duplicate of the DOM object, with all of its child elements intact. This creates a template we can fill in later.
 
   let $newArticle = $('article.template').clone();
-  /* DONE?: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
+  /* DONE: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
   $newArticle.removeClass('template');
 
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.attr('data-category', this.category);
 
-  /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
+  /* DONE: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
       1. author name,
       2. author url,
@@ -39,11 +39,6 @@ Article.prototype.toHtml = function() {
   $newArticle.find('address a').attr('href', this.authorUrl);
   $newArticle.find('time').attr('datetime', this.publishedOn);
   $newArticle.find('.article-body').html(this.body);
-  // $newArticle.data('h1', this.title);
-  // $newArticle.data('address', this.author);
-  // $newArticle.data('address a', this.authorUrl);
-  // $newArticle.data('time', this.publishedOn);
-  // $newArticle.data('.article-body', this.body);
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.append('<hr>');
@@ -55,12 +50,11 @@ rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-// TODO: Refactor these for loops using the .forEach() array method.
+// DONE: Refactor these for loops using the .forEach() array method.
 
 
 rawData.forEach(function(dataRaw) {
   articles.push(new Article(dataRaw));
-  console.log(articles);
 });
 
 

@@ -11,6 +11,7 @@ nav li {
 
 img {
   width: 20%;
+  max-width: 15em;
 }
 
 @media only screen and (min-width: 640px) {

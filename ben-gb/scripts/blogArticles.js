@@ -1,7 +1,7 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+// This data is used by article.js to create the Article objects. It is in the form of an array of objects, with each object containing several key/value pairs. The keys correspond to the properties of the article object, and the values are the information that will be rendered on the site.
 
 let rawData = [
   {
