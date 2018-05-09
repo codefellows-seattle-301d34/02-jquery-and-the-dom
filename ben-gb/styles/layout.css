@@ -1,4 +1,32 @@
-nav div {
+body > header {
+  width: 100%;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.heading-group-h1 {
+  float: left;
+  margin: 10px;
+}
+
+.icon-menu {
+  float: right;
+  font-size: 36px;
+}
+
+nav ul {
+  clear: both;
+}
+
+h1 {
+  margin: 0;
+}
+
+av div {
   position: absolute;
   right: 10px;
   top: 20px;
@@ -8,18 +36,18 @@ nav div {
 li {
   list-style: none;
   padding-bottom: 5px;
-  /* display: none; */
   border-bottom: 2px;
-  border-color: gray;
-  font-family: serif;
-  color: rgb(83, 79, 79);
+  border-bottom-style: solid;
+  border-color:#cccccc;
   margin-left: 10px;
 }
+
 ul{
   display: none;
+  padding: 0;
 }
 
-.icon-menu:hover + ul{
+nav:hover ul{
   display: block;
   list-style: none;
   padding-bottom: 5px;

@@ -1,5 +1,16 @@
+a {
+  text-decoration: none;
+  color: #777777;
+  font-weight: bold;
+}
+
+nav li {
+  font-size: 24px;
+  margin-top: 10px;
+}
 
 @media only screen and (min-width: 640px) {
+  
   .icon-menu {
     display: none;
     position: absolute;
@@ -18,35 +29,19 @@
   align-items: stretch;
   flex-flow: row nowrap;
   margin-left: 2%;
-}
+  }
 
-nav ul li {
-  display: inline-block;
-  margin-bottom: 10px;
-  text-align: center;
-  color: darkgrey;
-  /* align-items: stretch; */
-  /* flex-flow: row nowrap; */
-}
+  nav ul li {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-align: center;
+    color: darkgrey;
+    border-style: none;
+  }
  
-  
   nav ul {
     display: block;
     align-items: stretch;
     flex-flow: row nowrap;
   }
-
 }
-
-
-.icon-menu:hover + ul{
-  display: block;
-  list-style: none;
-  padding-bottom: 5px;
-  border-bottom: 2px;
-  border-color: gray;
-  font-family: serif;
-  color: rgb(83, 79, 79);
-  margin-left: 10px;
-}
-
