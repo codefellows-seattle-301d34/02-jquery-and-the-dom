@@ -1,0 +1,31 @@
+nav div {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 3em;
+}
+
+li {
+  list-style: none;
+  padding-bottom: 5px;
+  /* display: none; */
+  border-bottom: 2px;
+  border-color: gray;
+  font-family: serif;
+  color: rgb(83, 79, 79);
+  margin-left: 10px;
+}
+ul{
+  display: none;
+}
+
+.icon-menu:hover + ul{
+  display: block;
+  list-style: none;
+  padding-bottom: 5px;
+  border-bottom: 2px;
+  border-color: gray;
+  font-family: serif;
+  color: rgb(83, 79, 79);
+  margin-left: 10px;
+}
