@@ -1,0 +1,29 @@
+li a{
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: #777777;
+  font-weight: bold;
+}
+
+h1{
+  font-size: 48px;
+}
+
+.article-body {
+  line-height: 1.5em;
+}
+
+.icon-menu{
+  font-size: 36px;
+}
+
+main div {
+  font-size: 20px;
+  color: #777;
+}
+.template{
+  display:block;
+}
