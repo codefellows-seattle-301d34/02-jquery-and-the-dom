@@ -68,6 +68,10 @@ main p{
   line-height: 1.5em;
 }
 
+.template {
+  display: none;
+}
+
 @media only screen and (min-width:640px){
   .icon-menu{
     display: none;
