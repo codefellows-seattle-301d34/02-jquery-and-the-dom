@@ -36,7 +36,7 @@ Article.prototype.toHtml = function () {
   x4. article body, and
   x5. publication date. */
 
-  $newArticle.find( 'a.value' ).text( this.author );
+  $newArticle.find( 'a' ).text( this.author );
   $newArticle.find( 'address a href' ).text( this.authorUrl );
   $newArticle.find( 'h1' ).text( this.title );
   $newArticle.find( '.article-body' ).html( this.body );
