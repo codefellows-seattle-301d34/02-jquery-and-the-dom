@@ -50,8 +50,8 @@ Article.prototype.toHtml = function() {
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   
-  $newArticle.append('<hr>');
-  
+  git
+
   return $newArticle;
 };
 
