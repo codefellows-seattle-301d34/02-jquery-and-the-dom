@@ -4,6 +4,10 @@ address {
   font-weight: bold;
 }
 
+main p{
+  line-height: 1.5em;
+}
+
 .icon-menu {
   position: absolute;
   top: .1em;
@@ -13,11 +17,13 @@ address {
 
 img {
   display: block;
-  margin: auto;
+  margin: 1em auto;
+  width: 100%;
 }
 
 @media only screen and (min-width:640px){
   img{
     float: right;
+    width: auto;
   }
 }

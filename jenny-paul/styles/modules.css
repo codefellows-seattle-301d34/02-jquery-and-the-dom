@@ -60,14 +60,6 @@ li:first-child{
   display:block;
 }
 
-main {
-  padding: 0 1em;
-}
-
-main p{
-  line-height: 1.5em;
-}
-
 .template {
   display: none;
 }

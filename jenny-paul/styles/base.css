@@ -2,3 +2,7 @@ body {
   margin: 0em;
   padding: 0em;
 }
+
+main {
+  padding: 0 1em;
+}
