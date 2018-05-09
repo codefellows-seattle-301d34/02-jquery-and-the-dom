@@ -50,7 +50,8 @@ ul{
 
 nav:hover ul{
   display: block;
-  list-style: none;
-  border-bottom: 2px;
-  border-color: gray;
+}
+
+hr {
+  clear: both;
 }
