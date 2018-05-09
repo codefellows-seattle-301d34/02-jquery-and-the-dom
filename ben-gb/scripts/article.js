@@ -6,7 +6,13 @@ let articles = [];
 // PUT YOUR RESPONSE HERE
 
 function Article (rawDataObj) {
-  // TODO: Use the JS object that is passed in to complete this constructor function:
+  // DONE: Use the JS object that is passed in to complete this constructor function:
+  this.title = rawDataObj.title;
+  this.category = rawDataObj.category;
+  this.author = rawDataObj.author;
+  this.authorUrl = rawDataObj.authorUrl;
+  this.publishedOn = rawDataObj.publishedOn;
+  this.body = rawDataObj.body;
   // Save ALL the properties of `rawDataObj` into `this`
 }
 
@@ -15,7 +21,8 @@ Article.prototype.toHtml = function() {
   // PUT YOUR RESPONSE HERE
 
   let $newArticle = $('article.template').clone();
-  /* TODO: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
+  /* DONE?: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
+  $newArticle.removeClass('template');
 
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.attr('data-category', this.category);
@@ -27,7 +34,16 @@ Article.prototype.toHtml = function() {
       3. article title,
       4. article body, and
       5. publication date. */
-
+  $newArticle.find('h1').text(this.title);
+  $newArticle.find('address a').text(this.author);
+  $newArticle.find('address a').attr('href', this.authorUrl);
+  $newArticle.find('time').attr('datetime', this.publishedOn);
+  $newArticle.find('.article-body').html(this.body);
+  // $newArticle.data('h1', this.title);
+  // $newArticle.data('address', this.author);
+  // $newArticle.data('address a', this.authorUrl);
+  // $newArticle.data('time', this.publishedOn);
+  // $newArticle.data('.article-body', this.body);
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.append('<hr>');

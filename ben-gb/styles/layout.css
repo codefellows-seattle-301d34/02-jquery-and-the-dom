@@ -8,6 +8,14 @@ body > header {
   clear: both;
 }
 
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
 .heading-group-h1 {
   float: left;
   margin: 10px;
@@ -24,13 +32,6 @@ nav ul {
 
 h1 {
   margin: 0;
-}
-
-av div {
-  position: absolute;
-  right: 10px;
-  top: 20px;
-  font-size: 3em;
 }
 
 li {
@@ -50,10 +51,6 @@ ul{
 nav:hover ul{
   display: block;
   list-style: none;
-  padding-bottom: 5px;
   border-bottom: 2px;
   border-color: gray;
-  font-family: serif;
-  color: rgb(83, 79, 79);
-  margin-left: 10px;
 }

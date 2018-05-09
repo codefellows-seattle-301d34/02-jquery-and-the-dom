@@ -6,3 +6,7 @@
 body > header {
   background-color: #FFEAAA;
 }
+
+.template {
+  display: none;
+}
