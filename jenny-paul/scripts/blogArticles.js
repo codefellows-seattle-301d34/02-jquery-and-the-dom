@@ -5,7 +5,7 @@
 
 let rawData = [
   {
-    title:       'Bob Ross Ipsum',
+    title:      'Bob Ross Ipsum',
     category:    'art',
     author:      'Bob Ross',
     authorUrl:   'https://en.wikipedia.org/wiki/Bob_Ross',
