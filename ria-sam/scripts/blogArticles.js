@@ -2,7 +2,7 @@
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
 // PUT YOUR RESPONSE HERE
-// The data here is used to construct cloned objects which are then displayed on the page without having all this code clogging up the HTML file.  The structure of this data is in the form of an an array of objects, each of which utilizes key-value pairs, although the data in each object is a different.
+// The data here is used to construct cloned objects which are then displayed on the page without having all this code clogging up the HTML file.  The structure of this data is in the form of an an array of objects, each of which utilizes key-value pairs, although the data in each object is a different.rawData is our data source.
 
 let rawData = [
   {
