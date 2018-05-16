@@ -1,0 +1,18 @@
+.wrapper {
+  width: 100%;
+}
+
+header {
+  position:relative;
+  padding: 10px;
+}
+
+.icon-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+article > header > div * {
+  display: inline-block;
+}

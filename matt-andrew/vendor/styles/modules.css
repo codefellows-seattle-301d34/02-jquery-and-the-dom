@@ -1,0 +1,71 @@
+.template {
+  display: none;
+}
+
+
+
+.clearfix {
+  background-color: #ffe99b;
+}
+
+.icon-menu {
+  font-size: 2em;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2em;
+  display: none;
+}
+
+nav:hover ul {
+  display: block;
+}
+
+nav li {
+  padding: 1.5em 0;
+  border-bottom: 1px solid grey;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 1.75em;
+}
+
+p {
+  line-height: 1.5em;
+  padding: 0 1.5em;
+}
+
+article img {
+  margin: 10px;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+
+@media only screen and (min-width: 800px) {
+    
+    .icon-menu {
+        display: none;
+      }
+
+      nav ul {
+        display: block;
+      }
+
+      nav li {
+          display: inline-block;
+          border: none;
+          margin: 0 1em;
+      }
+
+    }
